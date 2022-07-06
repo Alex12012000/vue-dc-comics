@@ -1,17 +1,23 @@
 <template>
   <div id="app">
     <PageHeader />
+
+    <main>
+      <MainContentSection />
+    </main>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+// import MainContentSection from './components/MainContentSection.vue'
 import PageHeader from './components/PageHeader.vue'
+import MainContentSection from './components/MainContentSection.vue'
 
 export default {
   name: 'App',
   components: {
     PageHeader,
+    MainContentSection
     // HelloWorld
   }
 }

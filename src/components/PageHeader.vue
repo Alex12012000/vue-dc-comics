@@ -1,12 +1,16 @@
 <template>
     
+    <!-- Header -->
     <header>
         <div class="container">
+            <!-- Header LOGO -->
             <div class="logo"><img src="../assets/img/dc-logo.png" alt="" srcset=""></div>
+
+            <!-- Header NAV -->
             <nav>
                 <ul>
-                    <li v-for="link, index in menuLinks" :key="index">
-                        <a :href="link.link">{{link.text}}</a>
+                    <li v-for="link, index in menuLinks" :key="index" :class="{ active: link.current}">
+                        <a :href="link.link"> {{link.text}} </a>
                     </li>
                 </ul>
             </nav>
@@ -21,7 +25,7 @@ export default {
     name: "PageHeader",
     data() {
         return {
-            menuLikns: [
+            menuLinks: [
                 {
                     text: 'characters',
                     link: '#',
@@ -31,7 +35,7 @@ export default {
                 {
                     text: 'comics',
                     link: '#',
-                    current: false
+                    current: true
 
                 },
                 {
@@ -92,31 +96,48 @@ export default {
 
 <style lang="scss" scoped>
 @import "../style/common.scss";
+@import "../style/variables.scss";
 
 header{
     height: 80px;
-    background-color: aqua;
-    display: flex;
-    align-items: center;
+    background-color: white;
 
     .container {
         display: flex;
         justify-content: space-between
-
-        
     }
 
     .logo {
+        display: flex;
+        align-items: center;
         img {
         width: 60px;
         }
-
     }
 
     nav {
+        ul {
+            display: flex;
 
+            li {
+                margin: 0 5px;
+                line-height: 80px;
+
+                a {
+                    font-size: 12px;
+                    color: inherit;
+                    text-transform: uppercase;
+                }
+
+                
+            }
+
+            .active {
+                    color: $main_color;
+                    box-shadow: inset 0 -3px $main_color;
+                }
+        }
     }
-
     
 }
 
