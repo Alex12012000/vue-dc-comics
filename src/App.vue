@@ -4,20 +4,23 @@
 
     <main>
       <MainContentSection />
+      <IconInfoSection />
     </main>
   </div>
 </template>
 
 <script>
-// import MainContentSection from './components/MainContentSection.vue'
+// import IconInfoSection from './components/IconInfoSection.vue'
 import PageHeader from './components/PageHeader.vue'
 import MainContentSection from './components/MainContentSection.vue'
+import IconInfoSection from './components/IconInfoSection.vue'
 
 export default {
   name: 'App',
   components: {
     PageHeader,
-    MainContentSection
+    MainContentSection,
+    IconInfoSection
     // HelloWorld
   }
 }
