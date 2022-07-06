@@ -6,21 +6,26 @@
       <MainContentSection />
       <IconInfoSection />
     </main>
+
+    <PageFooter />
   </div>
 </template>
 
 <script>
-// import IconInfoSection from './components/IconInfoSection.vue'
+// import PageFooter from './components/PageFooter.vue'
 import PageHeader from './components/PageHeader.vue'
 import MainContentSection from './components/MainContentSection.vue'
 import IconInfoSection from './components/IconInfoSection.vue'
+import PageFooter from './components/PageFooter.vue'
+
 
 export default {
   name: 'App',
   components: {
     PageHeader,
     MainContentSection,
-    IconInfoSection
+    IconInfoSection,
+    PageFooter
     // HelloWorld
   }
 }
