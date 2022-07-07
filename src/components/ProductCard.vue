@@ -3,7 +3,10 @@
         <div class="product-image">
             <img :src="details.thumb" :alt="details.type" >
         </div>
-        <span>{{details.series}}</span>
+
+        <div class="text">
+            <span>{{details.series}}</span>
+        </div>
     </div>
 </template>
 
@@ -23,17 +26,15 @@ export default {
 
 .card {
     width: calc((100% / 6) - 20px);
-    
+   
     .product-image{
         height: 200px;
         overflow: hidden;
-        margin: 20px 0;
     }
 
-    span {
-        font-size: 15px;
+    .text {
+        margin: 10px 0;
     }
-    
 }
 
 

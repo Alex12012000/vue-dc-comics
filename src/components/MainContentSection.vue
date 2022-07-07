@@ -35,7 +35,6 @@ section {
     .content {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         flex-wrap: wrap;
         padding: 30px;
         color: white;
