@@ -26,10 +26,13 @@ export default {
 
 .card {
     width: calc((100% / 6) - 20px);
-   
+    margin-top: 10px;
     .product-image{
         height: 200px;
         overflow: hidden;
+        img {
+            height: 100%;
+        }
     }
 
     .text {
