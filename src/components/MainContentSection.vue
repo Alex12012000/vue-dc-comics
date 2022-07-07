@@ -2,7 +2,7 @@
     <section>
         <div class="container">
             <div class="content">
-                <h3>Content goes here</h3>
+                <ProductCard v-for="product, index in products" :key="index" :details="product"/>
             </div>
         </div>
     </section>
@@ -10,8 +10,20 @@
 
 
 <script>
+import ProductCard from './ProductCard.vue'
+import productInfo from '../assets/dc-comics.json'
+
+
 export default {
-    name: "MainContentSection"
+    name: "MainContentSection",
+    components: { 
+        ProductCard 
+    },
+    data() {
+        return{
+            products: productInfo
+        }
+    }
 }
 </script>
 
@@ -21,6 +33,10 @@ export default {
 section {
     background-color: #1c1c1c;
     .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
         padding: 30px;
         color: white;
     }
